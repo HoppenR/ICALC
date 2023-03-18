@@ -72,6 +72,7 @@ class UI:
                 width=SCRN_NCOLS,
                 height=SCRN_NROWS,
                 bg=BGND_COLOR,
+                highlightthickness=0,
         )
         self.img = PhotoImage(width=SCRN_NCOLS, height=SCRN_NROWS)
         self.canvas.create_image((0, 0), image=self.img, anchor="nw")
