@@ -10,24 +10,25 @@ OUTPUT_HANDLER_INIT:
     ret
 
 ; PRINT_CHAR(r16: char = character to print)
-; Sends scrolldown to SPI if we have reached WINDOW_HEIGHT lines
+; Sends scrolldown to UART if we have reached WINDOW_HEIGHT lines
 PRINT_CHAR:
-    call    UART_SEND
-    ;call    SPI_SEND
-    ; Check if we need to scroll down before sending char to SPI
+    ; NOTE: If we are sending newline, we should check
+    ;       if we need to scroll down first
     cpi     r16, '\n'
-    brne    PRINT_CHAR_send_spi
+    brne    PRINT_CHAR_exit
     lds     r16, LINE
     cpi     r16, WINDOW_HEIGHT
     breq    PRINT_CHAR_scrolldown
     inc     r16
     sts     LINE, r16
-    rjmp    PRINT_CHAR_send_spi
+    ldi     r16, '\n'
+    rjmp    PRINT_CHAR_exit
 PRINT_CHAR_scrolldown:
     ldi     r16, CHAR_SCROLLDOWN
     call    UART_SEND
-    ;call    SPI_SEND
-PRINT_CHAR_send_spi:
+    ldi     r16, '\n'
+PRINT_CHAR_exit:
+    call    UART_SEND
     ret
 
 ; PRINT_RESULT
@@ -56,7 +57,7 @@ PRINT_RESULT_leading_zero:
 PRINT_RESULT_loop:
     ld      r16, X+
     add     r16, r18
-    ; NOTE: Sending char in r16 to UART/SPI
+    ; NOTE: Sending char in r16 to UART
     call    PRINT_CHAR
     dec     r19
     brne    PRINT_RESULT_loop

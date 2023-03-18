@@ -75,10 +75,10 @@ PARSE_EXPR_return:
 ; Returns flag Z = false if number overflows
 ; NOTE: only reads numbers with at most NUM_OPERAND_DIGITS - 1 digits
 ;       this is to not have to deal with signed integer overflow
-; skips leading spaces
+; Skips leading spaces
 ; Changes Y pointer
 ; Changes Z pointer
-; Changes X pointer (if leading spaces)
+; Changes X pointer
 PARSE_NUM:
     ; Default sign for numbers
     ldi     r16, '+'
