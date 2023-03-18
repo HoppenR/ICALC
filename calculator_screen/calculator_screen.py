@@ -19,7 +19,7 @@ from ui import UI
                         │   ├── bitmap.py
                         │   ├── calculator_screen.py
                         │   └── ui.py
-                        └── kodade_tecken.txt
+                        └── charset.vhdl
 
      Author: Christoffer Lundell (chrlu470)
 '''
