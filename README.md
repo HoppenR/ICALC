@@ -1,4 +1,4 @@
-## ICALC
+# ICALC
 
 This repository contains two projects that are meant to interface with each other.
 
@@ -20,7 +20,7 @@ the meaningful changes:
 |  12  | clear screen |
 | 'x'  | square block |
 
-# Why?
+## Why
 ICALC started as a university group project about microcontroller programming,
 but when I realized I was the only one doing any work, I took the opportunity to
 turn my 400% workload into a fully fledged user-friendly project and put it up
