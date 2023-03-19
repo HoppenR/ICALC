@@ -5,7 +5,7 @@ from ui import UI
      Calculator Screen:
                     - A bitmap-based serial terminal with a simple, easy-to-use
                       graphical interface, built to interface with the arduino
-                      CALCI project and understands the custom protocol for it.
+                      ICALC project and understands the custom protocol for it.
 
      Requirements:
                     - pySerial (pyserial)

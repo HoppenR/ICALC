@@ -32,7 +32,7 @@ Run the file `calculator_screen.py`
 - To test changes to the characters and learn about pixel based graphical
   drawing.
 
-- To not have to differentiate between SPI output and UART output in the CALCI
+- To not have to differentiate between SPI output and UART output in the ICALC
   project.
 
 - Easier to use than many serial terminals out there!
