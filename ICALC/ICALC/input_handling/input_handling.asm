@@ -48,9 +48,9 @@ INPUT_HANDLER_not_valid:
     call    PRINT_CHAR
     ret
 
-; IS_VALID_SCANCODE(r16: scancode = last keypress)
+; IS_VALID_CHAR(r16: char = user keypress)
 ; Changes pointer Z
-; Returns flag Z = if scancode in VALID_SCANCODES
+; Returns flag Z = if scancode in VALID_CHARS
 IS_VALID_CHAR:
     ldi     ZH, HIGH(VALID_CHARS * 2)
     ldi     ZL, LOW(VALID_CHARS * 2)
