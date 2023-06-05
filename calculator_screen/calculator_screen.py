@@ -13,7 +13,7 @@ from ui import UI
                     - Full access to COM-ports
                         If you get "Permission Denied" errors on linux systems
                         you probably need to be in group "uucp" or "dialout"
-                    - The file "kodade_tecken.txt" in the parent directory
+                    - The file "charset.vhdl" in the parent directory
                         ICALC
                         ├── calculator_screen
                         │   ├── bitmap.py

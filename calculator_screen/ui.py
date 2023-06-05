@@ -184,7 +184,7 @@ class UI:
         elif msg == CHAR_SCROLLDWN:
             self.reset_screen()
             try:
-                self.buffer = self.buffer.split(b'\n', 1)[-1]
+                self.buffer = self.buffer.split(b'\n', 1)[1]
             except IndexError:
                 # NOTE: Got sent scrolldown on first line, ignore
                 self.buffer.clear()
