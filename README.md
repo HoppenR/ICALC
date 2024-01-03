@@ -19,9 +19,3 @@ the meaningful changes:
 |  11  | scroll down  |
 |  12  | clear screen |
 | 'x'  | square block |
-
-## Why
-ICALC started as a university group project about microcontroller programming,
-but when I realized I was the only one doing any work, I took the opportunity to
-turn my 400% workload into a fully fledged user-friendly project and put it up
-available for anyone to use.
